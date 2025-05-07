@@ -1,35 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.netvibes.com/ns/" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>Dynamic Widget</title>
-  <link rel="stylesheet" href="widget.css">
+  <title>Conditional Widget</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="form-group">
+    <label for="textbox1">TextBox1</label>
+    <input type="text" id="textbox1" />
+  </div>
 
-  <label for="textbox1">Text Box 1</label>
-  <input type="text" id="textbox1">
+  <div class="form-group">
+    <label for="textbox2">TextBox2</label>
+    <input type="text" id="textbox2" />
+  </div>
 
-  <label for="textbox2">Text Box 2</label>
-  <input type="text" id="textbox2">
+  <div class="form-group">
+    <label for="textarea1">TextArea1</label>
+    <textarea id="textarea1" rows="4"></textarea>
+  </div>
 
-  <label for="textarea1">Text Area</label>
-  <textarea id="textarea1" rows="4"></textarea>
+  <div class="form-group">
+    <label for="dropdown1">DropDown1</label>
+    <select id="dropdown1">
+      <option value="">--Select--</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </div>
 
-  <label for="mainDropdown">Main Dropdown</label>
-  <select id="mainDropdown" onchange="handleDropdownChange()">
-    <option value="">-- Select --</option>
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
-  </select>
+  <div id="yesOptions" style="display: none;">
+    <div class="form-group">
+      <label for="dropdown2">DropDown2</label>
+      <select id="dropdown2">
+        <option value="OptionA">OptionA</option>
+        <option value="OptionB">OptionB</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="dropdown3">DropDown3</label>
+      <select id="dropdown3">
+        <option value="OptionX">OptionX</option>
+        <option value="OptionY">OptionY</option>
+      </select>
+    </div>
+  </div>
 
-  <div id="additional-fields"></div>
+  <div id="noOption" style="display: none;">
+    <div class="form-group">
+      <label for="textarea2">TextArea2</label>
+      <textarea id="textarea2" rows="3"></textarea>
+    </div>
+  </div>
 
-  <div class="button-container">
+  <div>
     <button onclick="save()">Save</button>
     <button onclick="cancel()">Cancel</button>
   </div>
-
-  <script src="widget.js"></script>
 </body>
 </html>
