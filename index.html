@@ -1,41 +1,29 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.netvibes.com/ns/" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Conditional Form Widget</title>
-
-  <meta name="author" content="Widget Developer" />
-  <meta name="apiVersion" content="1.0" />
-  <meta name="debugMode" content="true" />
-  <meta name="strictMode" content="false" />
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Widget Preferences -->
-  <widget:preferences>
-    <widget:preference type="text" name="textPref" label="Default Text" defaultValue="Enter your name" />
-  </widget:preferences>
-
-  <link rel="stylesheet" type="text/css" href="./styles/style.css" />
-  <script src="./scripts/main.js"></script>
+  <title>Conditional Widget</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="script.js" defer></script>
 </head>
-
 <body>
   <div class="form-group">
     <label for="textbox1">TextBox1</label>
     <input type="text" id="textbox1" />
   </div>
+
   <div class="form-group">
     <label for="textbox2">TextBox2</label>
     <input type="text" id="textbox2" />
   </div>
+
   <div class="form-group">
     <label for="textarea1">TextArea1</label>
     <textarea id="textarea1" rows="4"></textarea>
   </div>
+
   <div class="form-group">
     <label for="dropdown1">DropDown1</label>
     <select id="dropdown1">
@@ -49,15 +37,15 @@
     <div class="form-group">
       <label for="dropdown2">DropDown2</label>
       <select id="dropdown2">
-        <option value="OptionA">dropdown1</option>
-        <option value="OptionB">dropdown2</option>
+        <option value="OptionA">Dropdown1</option>
+        <option value="OptionB">Dropdown2</option>
       </select>
     </div>
     <div class="form-group">
       <label for="dropdown3">DropDown3</label>
       <select id="dropdown3">
-        <option value="OptionX">DropDown1</option>
-        <option value="OptionY">DropDown2</option>
+        <option value="OptionX">Dropdown1</option>
+        <option value="OptionY">Dropdown2</option>
       </select>
     </div>
   </div>
@@ -73,17 +61,5 @@
     <button onclick="save()">Save</button>
     <button onclick="cancel()">Cancel</button>
   </div>
-
-  <!-- Widget Bootstrap -->
-  <script type="text/javascript">
-    function widgetLoading() {
-      if (typeof widget !== "undefined") {
-        executeInitWidget(widget);
-      } else {
-        setTimeout(widgetLoading, 100);
-      }
-    }
-    widgetLoading();
-  </script>
 </body>
 </html>
